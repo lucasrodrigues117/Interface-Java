@@ -1,0 +1,21 @@
+# Ignorar arquivos do sistema Windows
+*.ini
+*.dat
+*.log
+Thumbs.db
+Desktop.ini
+
+# Ignorar pastas do sistema
+AppData/
+OneDrive/
+Saved Games/
+Searches/
+
+# Ignorar arquivos do usuário
+.bash_history
+.vscode/
+Documents/
+Downloads/
+Music/
+Pictures/
+Videos/
