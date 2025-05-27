@@ -1,3 +1,5 @@
+import java.awt.Color;
+import javax.swing.border.Border;
 import javax.swing.*;
 
 public class CadastroPessoa {
@@ -36,11 +38,11 @@ public class CadastroPessoa {
         janela.add(nomeLabel);
         janela.add(nomeField);
 
-        JLabel rgLabel = new JLabel("RG / Inscrição Estadual");
+        JLabel rgLabel = new JLabel("RG - Inscrição Estadual");
         rgLabel.setBounds(20, 130, 150, 20);
         JTextField rgField = new JTextField();
         rgField.setBounds(170, 130, 150, 25);
-        JLabel orgaoLabel = new JLabel("Órgão Expedidor");
+        JLabel orgaoLabel = new JLabel("Órgã Expedidor");
         orgaoLabel.setBounds(330, 130, 120, 20);
         JTextField orgaoField = new JTextField();
         orgaoField.setBounds(450, 130, 100, 25);
@@ -115,7 +117,6 @@ public class CadastroPessoa {
         janela.add(telefoneLabel);
         janela.add(telefoneField);
 
-        // Situação
         JLabel situacaoLabel = new JLabel("Situação");
         situacaoLabel.setBounds(20, 330, 60, 20);
         JRadioButton ativoRadio = new JRadioButton("Ativo");
@@ -131,8 +132,14 @@ public class CadastroPessoa {
 
         JButton confirmarButton = new JButton("Confirmar");
         confirmarButton.setBounds(20, 380, 100, 30);
+        confirmarButton.setBackground(Color.orange);
+        confirmarButton.setBorder(Borda());
+
         JButton excluirButton = new JButton("Excluir");
         excluirButton.setBounds(130, 380, 100, 30);
+        excluirButton.setBackground(Color.orange);
+        excluirButton.setBorder(Borda());
+
         JButton limparButton = new JButton("Limpar");
         limparButton.setBounds(240, 380, 100, 30);
         janela.add(confirmarButton);
@@ -162,4 +169,8 @@ public class CadastroPessoa {
 
         janela.setVisible(true);
     }
+
+    public static Border Borda(){
+        return BorderFactory.createLineBorder(Color.black, 3);
+    };
 }
