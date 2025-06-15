@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Component;
 import javax.swing.border.Border;
 import javax.swing.*;
 
@@ -14,89 +15,123 @@ public class CadastroPessoa {
         janela.add(titulo);
 
         JLabel tipoLabel = new JLabel("Tipo");
-        tipoLabel.setBounds(20, 50, 50, 20);
+        tipoLabel.setBounds(20, 110, 150, 25);
+        tipoLabel.setBorder(Borda());
+        centralizarComponente(tipoLabel);
+
         JComboBox<String> tipoCombo = new JComboBox<>(new String[]{"Física", "Jurídica"});
-        tipoCombo.setBounds(70, 50, 100, 25);
+        tipoCombo.setBounds(180, 110, 180, 25);
+        centralizarComponente(tipoCombo);
         janela.add(tipoLabel);
         janela.add(tipoCombo);
 
         JLabel cpfCnpjLabel = new JLabel("CPF / CNPJ");
-        cpfCnpjLabel.setBounds(180, 50, 100, 20);
+        cpfCnpjLabel.setBounds(370, 110, 180, 25);
+        cpfCnpjLabel.setBorder(Borda());
+        centralizarComponente(cpfCnpjLabel);
         JTextField cpfCnpjField = new JTextField();
-        cpfCnpjField.setBounds(260, 50, 150, 25);
+        cpfCnpjField.setBounds(560, 110, 200, 25);
         janela.add(cpfCnpjLabel);
         janela.add(cpfCnpjField);
 
         JCheckBox fornecedorCheck = new JCheckBox("Fornecedor");
-        fornecedorCheck.setBounds(430, 50, 120, 25);
+        fornecedorCheck.setBounds(770, 110, 150, 25);
         janela.add(fornecedorCheck);
 
         JLabel nomeLabel = new JLabel("Nome");
-        nomeLabel.setBounds(20, 90, 100, 20);
+        nomeLabel.setBounds(20, 150, 150, 25);
+        nomeLabel.setBorder(Borda());
+        centralizarComponente(nomeLabel);
         JTextField nomeField = new JTextField();
-        nomeField.setBounds(70, 90, 400, 25);
+        nomeField.setBounds(180, 150, 800, 25);
         janela.add(nomeLabel);
         janela.add(nomeField);
 
-        JLabel rgLabel = new JLabel("RG - Inscrição Estadual");
-        rgLabel.setBounds(20, 130, 150, 20);
+        JLabel rgLabel = new JLabel("RG / Inscrição Estadual");
+        rgLabel.setBounds(20, 190, 150, 25);
+        centralizarComponente(rgLabel);
+        rgLabel.setBorder(Borda());
         JTextField rgField = new JTextField();
-        rgField.setBounds(170, 130, 150, 25);
-        JLabel orgaoLabel = new JLabel("Órgã Expedidor");
-        orgaoLabel.setBounds(330, 130, 120, 20);
+        rgField.setBounds(180, 190, 250, 25);
+
+        JLabel orgaoLabel = new JLabel("Órgão Expedidor");
+        orgaoLabel.setBounds(450, 190, 150, 25);
+        orgaoLabel.setBorder(Borda());
+        centralizarComponente(orgaoLabel);
         JTextField orgaoField = new JTextField();
-        orgaoField.setBounds(450, 130, 100, 25);
+        orgaoField.setBounds(610, 190, 160, 25);
         janela.add(rgLabel);
         janela.add(rgField);
         janela.add(orgaoLabel);
         janela.add(orgaoField);
 
         JLabel emailLabel = new JLabel("Email");
-        emailLabel.setBounds(20, 170, 100, 20);
+        emailLabel.setBounds(20, 230, 150, 25);
+        emailLabel.setBorder(Borda());
+        centralizarComponente(emailLabel);
         JTextField emailField = new JTextField();
-        emailField.setBounds(70, 170, 200, 25);
+        emailField.setBounds(180, 230, 430, 25);
+
         JLabel cepLabel = new JLabel("CEP");
-        cepLabel.setBounds(280, 170, 40, 20);
+        cepLabel.setBounds(620, 230, 150, 25);
+        cepLabel.setBorder(Borda());
+        centralizarComponente(cepLabel);
         JTextField cepField = new JTextField();
-        cepField.setBounds(320, 170, 100, 25);
+        cepField.setBounds(780, 230, 200, 25);
         janela.add(emailLabel);
         janela.add(emailField);
         janela.add(cepLabel);
         janela.add(cepField);
 
-        JLabel paisLabel = new JLabel("País");
-        paisLabel.setBounds(20, 210, 40, 20);
+        JLabel paísLabel = new JLabel("País");
+        paísLabel.setBounds(20, 270, 150, 25);
+        centralizarComponente(paísLabel);
+        paísLabel.setBorder(Borda());
+
         JTextField paisField = new JTextField("BRASIL");
         paisField.setEnabled(false);
-        paisField.setBounds(70, 210, 100, 25);
+        paisField.setBounds(180, 270, 430, 25);
+
         JLabel ufLabel = new JLabel("UF");
-        ufLabel.setBounds(180, 210, 30, 20);
+        ufLabel.setBounds(620, 270, 150, 25);
+        ufLabel.setBorder(Borda());
+        centralizarComponente(ufLabel);
         JTextField ufField = new JTextField();
-        ufField.setBounds(210, 210, 50, 25);
-        janela.add(paisLabel);
+        ufField.setBounds(830, 270, 150, 25);
+        janela.add(paísLabel);
         janela.add(paisField);
         janela.add(ufLabel);
         janela.add(ufField);
 
         JLabel municipioLabel = new JLabel("Município");
-        municipioLabel.setBounds(270, 210, 80, 20);
+        municipioLabel.setBounds(20, 310, 150, 25);
+        municipioLabel.setBorder(Borda());
+        centralizarComponente(municipioLabel);
         JTextField municipioField = new JTextField();
-        municipioField.setBounds(350, 210, 150, 25);
+        municipioField.setBounds(180, 310, 800, 25);
         janela.add(municipioLabel);
         janela.add(municipioField);
 
         JLabel logradouroLabel = new JLabel("Logradouro");
-        logradouroLabel.setBounds(20, 250, 100, 20);
+        logradouroLabel.setBounds(20, 350, 150, 25);
+        centralizarComponente(logradouroLabel);
+        logradouroLabel.setBorder(Borda());
         JTextField logradouroField = new JTextField();
-        logradouroField.setBounds(120, 250, 200, 25);
+        logradouroField.setBounds(180, 350, 800, 25);
+
         JLabel numeroLabel = new JLabel("Número");
-        numeroLabel.setBounds(330, 250, 60, 20);
+        numeroLabel.setBounds(20, 390, 150, 25);
+        centralizarComponente(numeroLabel);
+        numeroLabel.setBorder(Borda());
         JTextField numeroField = new JTextField();
-        numeroField.setBounds(390, 250, 50, 25);
+        numeroField.setBounds(180, 390, 150, 25);
+        
         JLabel complementoLabel = new JLabel("Complemento");
-        complementoLabel.setBounds(450, 250, 100, 20);
+        complementoLabel.setBounds(340, 390, 150, 25);
+        complementoLabel.setBorder(Borda());
+        centralizarComponente(complementoLabel);
         JTextField complementoField = new JTextField();
-        complementoField.setBounds(550, 250, 100, 25);
+        complementoField.setBounds(500, 390, 480, 25);
         janela.add(logradouroLabel);
         janela.add(logradouroField);
         janela.add(numeroLabel);
@@ -105,49 +140,56 @@ public class CadastroPessoa {
         janela.add(complementoField);
 
         JLabel bairroLabel = new JLabel("Bairro");
-        bairroLabel.setBounds(20, 290, 60, 20);
+        bairroLabel.setBounds(20, 430, 150, 25);
+        centralizarComponente(bairroLabel);
+        bairroLabel.setBorder(Borda());
         JTextField bairroField = new JTextField();
-        bairroField.setBounds(80, 290, 150, 25);
+        bairroField.setBounds(180, 430, 150, 25);
+
         JLabel telefoneLabel = new JLabel("Telefone");
-        telefoneLabel.setBounds(240, 290, 80, 20);
+        telefoneLabel.setBounds(340, 430, 150, 25);
+        telefoneLabel.setBorder(Borda());
+        centralizarComponente(telefoneLabel);
         JTextField telefoneField = new JTextField();
-        telefoneField.setBounds(320, 290, 150, 25);
+        telefoneField.setBounds(500, 430, 200, 25);
+
+        JLabel situacaoLabel = new JLabel("Situação");
+        situacaoLabel.setBounds(720, 430, 150, 25);
+        situacaoLabel.setBorder(Borda());
+        centralizarComponente(situacaoLabel);
+        JRadioButton ativoRadio = new JRadioButton("Ativo");
+        ativoRadio.setBounds(880, 430, 60, 25);
+        JRadioButton inativoRadio = new JRadioButton("Inativo");
+        inativoRadio.setBounds(940, 430, 80, 25);
+        ButtonGroup situacaoGroup = new ButtonGroup();
+        situacaoGroup.add(ativoRadio);
+        situacaoGroup.add(inativoRadio);
+
         janela.add(bairroLabel);
         janela.add(bairroField);
         janela.add(telefoneLabel);
         janela.add(telefoneField);
-
-        JLabel situacaoLabel = new JLabel("Situação");
-        situacaoLabel.setBounds(20, 330, 60, 20);
-        JRadioButton ativoRadio = new JRadioButton("Ativo");
-        ativoRadio.setBounds(90, 330, 60, 25);
-        JRadioButton inativoRadio = new JRadioButton("Inativo");
-        inativoRadio.setBounds(160, 330, 70, 25);
-        ButtonGroup situacaoGroup = new ButtonGroup();
-        situacaoGroup.add(ativoRadio);
-        situacaoGroup.add(inativoRadio);
         janela.add(situacaoLabel);
         janela.add(ativoRadio);
         janela.add(inativoRadio);
 
         JButton confirmarButton = new JButton("Confirmar");
-        confirmarButton.setBounds(20, 380, 100, 30);
+        confirmarButton.setBounds(20, 470, 100, 30);
         confirmarButton.setBackground(Color.orange);
         confirmarButton.setBorder(Borda());
 
         JButton excluirButton = new JButton("Excluir");
-        excluirButton.setBounds(130, 380, 100, 30);
+        excluirButton.setBounds(125, 470, 100, 30);
         excluirButton.setBackground(Color.orange);
         excluirButton.setBorder(Borda());
 
         JButton limparButton = new JButton("Limpar");
-        limparButton.setBounds(240, 380, 100, 30);
+        limparButton.setBounds(230, 470, 100, 30);
+
         janela.add(confirmarButton);
         janela.add(excluirButton);
         janela.add(limparButton);
 
-
-        //Essa parte faz com que o botão "LIMPAR" funcione. Não encontrei outro método como um form.reset().
         limparButton.addActionListener(e -> {
             tipoCombo.setSelectedIndex(0);
             cpfCnpjField.setText("");
@@ -170,7 +212,26 @@ public class CadastroPessoa {
         janela.setVisible(true);
     }
 
-    public static Border Borda(){
-        return BorderFactory.createLineBorder(Color.black, 3);
-    };
+    public static Border Borda() {
+        return BorderFactory.createLineBorder(Color.gray, 1);
+    }
+
+    public static void centralizarComponente(JComponent componente) {
+        if (componente instanceof JLabel) {
+            ((JLabel) componente).setHorizontalAlignment(SwingConstants.CENTER);
+        } else if (componente instanceof AbstractButton) {
+            ((AbstractButton) componente).setHorizontalAlignment(SwingConstants.CENTER);
+        } else if (componente instanceof JComboBox) {
+            ((JComboBox<?>) componente).setRenderer(new DefaultListCellRenderer() {
+                @Override
+                public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+                    JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+                    label.setHorizontalAlignment(SwingConstants.CENTER);
+                    return label;
+                }
+            });
+        }
+    }
+
+
 }
