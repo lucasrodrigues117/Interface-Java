@@ -6,8 +6,8 @@ import javax.swing.*;
 
 public class CadastroPessoa {
     public static void main(String[] args) {
-        JFrame janela = new JFrame("Cadastro de Pessoa");
-        janela.setSize(828, 700);
+        JFrame janela = new JFrame("Cadastro de Pesso");
+        janela.setSize(1100, 700);
         janela.setLayout(null);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
